@@ -67,8 +67,8 @@ const Hero = () => {
           </motion.div>
 
           <motion.div className="flex flex-col md:flex-row gap-6 justify-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8, duration: 0.5 }}>
-            <motion.div initial={{opacity: 0.1}} animate={{opacity: [0.1, 0.15, 0.2, 0.25, 0.3, 1, 0, 1, 1, 1, 1, 1, 1, 1], ease: "easeIn"}} transition={{duration: 0.9, repeatDelay: 3, delay: 1.5, repeat: Infinity}}>
-            <div className="max-md:w-35 border border-purple-500 p-2 rounded-lg" style={{ boxShadow: "0 0 10px 1px #9333ea" }}>
+            <motion.div initial={{opacity: 0}} animate={{opacity: [0, 0, 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 1, 0, 1, 1, 1, 1, 1, 1, 1], ease: "easeIn"}} transition={{duration: 1, repeatDelay: 2.7, delay: 1.65, repeat: Infinity}}>
+            <div className="max-md:w-35 border-2 border-purple-500 p-2 rounded-lg" style={{ boxShadow: "0 0 10px 1px #9333ea" }}>
                 <p className="font-oswald-300 text-xl md:text-3xl text-cyan-300" style={{ textShadow: "0 0 12px #4DFFF9" }}>
                   PROXIMAMENTE
                 </p>

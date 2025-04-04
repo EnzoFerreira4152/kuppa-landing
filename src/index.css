@@ -19,10 +19,6 @@ body {
   color: white;
 }
 
-.full-height {
-  height: calc(var(--vh, 1vh) * 100);
-}
-
 .font-inter-300{
   font-family: "Inter";
   font-weight: 300;
