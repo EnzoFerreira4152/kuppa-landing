@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { FaFacebook, FaInstagram, FaTwitter, FaTiktok, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import KuppaMascot from './KuppaMascot';
 
 const Footer = () => {
   return (
@@ -13,13 +14,13 @@ const Footer = () => {
       
       {/* Contenido del footer */}
       <div className="container mx-auto px-6 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Logo y descripción */}
           <div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} viewport={{ once: true }} className="mb-6">
               <h3 className="text-3xl font-bold">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500">
-                  KUPPA STORE
+                  KUPPA <span className='text-lg italic text-cyan-300'>24HS</span>
                 </span>
               </h3>
             </motion.div>
@@ -33,8 +34,10 @@ const Footer = () => {
             </div>
           </div>
 
+          <KuppaMascot />
+
           {/* Enlaces rápidos */}
-          <div>
+          {/* <div>
             <h4 className="text-white text-xl font-bold mb-6">Enlaces rápidos</h4>
             <ul className="space-y-3">
               <FooterLink to="/">Inicio</FooterLink>
@@ -43,10 +46,10 @@ const Footer = () => {
               <FooterLink to="/nosotros">Sobre nosotros</FooterLink>
               <FooterLink to="/blog">Blog</FooterLink>
             </ul>
-          </div>
+          </div> */}
 
           {/* Ayuda */}
-          <div>
+          {/* <div>
             <h4 className="text-white text-xl font-bold mb-6">Ayuda</h4>
             <ul className="space-y-3">
               <FooterLink to="/envios">Envíos y entregas</FooterLink>
@@ -55,7 +58,7 @@ const Footer = () => {
               <FooterLink to="/privacidad">Política de privacidad</FooterLink>
               <FooterLink to="/terminos">Términos y condiciones</FooterLink>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contacto */}
           <div>
@@ -65,19 +68,19 @@ const Footer = () => {
                 <div className="text-cyan-400 mt-1">
                   <FaMapMarkerAlt />
                 </div>
-                <span className="text-gray-400">San Fernando 299, Resistencia - Chaco</span>
+                <span className="text-gray-400">San Fernando 299, Resistencia, Chaco</span>
               </li>
               <li className="flex items-center space-x-3">
                 <div className="text-cyan-400">
                   <FaPhoneAlt />
                 </div>
-                <span className="text-gray-400">+54 9 (362) 549-0418</span>
+                <span className="text-gray-400">{"De momento escribinos a nuestro mail ;)"} {/* +54 9 (362) 549-0418 */}</span>
               </li>
               <li className="flex items-center space-x-3">
                 <div className="text-cyan-400">
                   <FaEnvelope />
                 </div>
-                <span className="text-gray-400">kuppastoreresis@gmail.com</span>
+                <span className="text-gray-400">info@kuppa.com.ar</span>
               </li>
             </ul>
             
