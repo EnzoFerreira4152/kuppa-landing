@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import KuppaMascot from './KuppaMascot';
+import KuppaIMG from './KuppaIMG';
+import mascot_img from '../assets/mascot_img.png'
 
 const Footer = () => {
   return (
@@ -25,16 +26,16 @@ const Footer = () => {
               </h3>
             </motion.div>
             <p className="text-gray-400 mb-6">
-              Tu tienda de bebidas y comestibles con ese toque retro que te transportará a una vibrante época.
+              Tu tienda de bebidas y comestibles con ese toque de nostalgia que buscabas.
             </p>
-            <div className="flex justify-center space-x-4">
+            {/* <div className="flex justify-center space-x-4">
               <SocialIcon icon={<FaFacebook />} color="bg-blue-600" />
               <SocialIcon icon={<FaInstagram />} color="bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-700" />
               <SocialIcon icon={<FaTwitter />} color="bg-blue-400" />
-            </div>
+            </div> */}
           </div>
 
-          <KuppaMascot />
+          <KuppaIMG src={mascot_img} />
 
           {/* Enlaces rápidos */}
           {/* <div>
@@ -68,7 +69,7 @@ const Footer = () => {
                 <div className="text-cyan-400 mt-1">
                   <FaMapMarkerAlt />
                 </div>
-                <span className="text-gray-400">San Fernando 299, Resistencia, Chaco</span>
+                <span className="text-gray-400">Corrientes 1101, Resistencia, Chaco</span>
               </li>
               <li className="flex items-center space-x-3">
                 <div className="text-cyan-400">
@@ -84,21 +85,26 @@ const Footer = () => {
               </li>
             </ul>
             
-            <div className="mt-6">
-              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-white font-bold text-sm hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg shadow-purple-500/20">
-                CONTACTAR AHORA
-              </motion.button>
-            </div>
+            {/* <div className="mt-6">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="mailto:info@kuppa.com.ar"
+              className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-white font-bold text-sm hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg shadow-purple-500/20"
+            >
+              CONTACTAR AHORA
+            </motion.a>
+            </div> */}
           </div>
         </div>
 
         {/* Línea separadora */}
         <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
               © 2025 KUPPA STORE. Todos los derechos reservados.
             </p>
-            <div className="flex space-x-6">
+            {/* <div className="flex space-x-6">
               <Link to="/privacidad" className="text-gray-500 text-sm hover:text-cyan-400 transition-colors">
                 Privacidad
               </Link>
@@ -108,7 +114,7 @@ const Footer = () => {
               <Link to="/cookies" className="text-gray-500 text-sm hover:text-cyan-400 transition-colors">
                 Cookies
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

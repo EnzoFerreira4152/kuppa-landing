@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { FaShoppingCart, FaArrowDown } from 'react-icons/fa';
 import { FcAlarmClock } from "react-icons/fc";
 import NeonLoader from './NeonLoader';
+import hero_img from '../assets/hero_img.png'
+import KuppaIMG from './KuppaIMG';
 
 const Hero = () => {
   return (
@@ -54,13 +56,20 @@ const Hero = () => {
       <div className="relative container mx-auto px-6 py-24 flex flex-col items-center justify-center min-h-screen z-10">
         <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.5 }} className="text-center flex flex-col items-center">
           <h1 className="text-6xl md:text-8xl font-bold mb-6">
-            <span className="font-monoton-400 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500">
+            <KuppaIMG
+              src={hero_img}
+              alt="Kuppa_logo"
+              width={400}
+              height={400}
+              draggable={false}
+            />
+            {/* <span className="font-monoton-400 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500">
               KUPP<span className="-ml-4 inline-block">A</span>
-            </span>
+            </span> */}
           </h1>
           
           <motion.div className="font-oswald-300 text-md md:text-2xl text-cyan-300 mb-12 max-w-2xl mx-auto" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.8 }}>
-            <p className="mb-6">Donde los sabores de siempre se encuentran con lo retro</p>
+            <p className="mb-6 italic">Donde los sabores de siempre se encuentran con lo retro</p>
             <div className="flex justify-center">
               <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500"></div>
             </div>
